@@ -1,32 +1,60 @@
+
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" :class="{'theme-dark': nightMode}">
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-3 text-left" id="nav">
+            <p v-if="nightMode" @click="nightMode = !nightMode">Dark</p>
+            <p v-else @click="nightMode = !nightMode">Light</p>
+          <div class="row">
+            <div class="col-12 my-1"><router-link class="routerLink" to="/">Home</router-link></div>
+            <!-- <div class="col-12"><router-link to="/about">About</router-link></div> -->
+            <div class="col-12 my-1"><p class="headerMenu">Workshop</p></div>
+            <div class="col-12 my-1"><router-link class="routerLink" to="/limitmessage">Limit Message</router-link></div>
+            <div class="col-12 my-1"><router-link class="routerLink" to="/previewimage">Preview Image</router-link></div>
+            <div class="col-12 my-1"><router-link class="routerLink" to="/calculateprice">Calculate Price</router-link></div>
+            <div class="col-12 my-1"><router-link class="routerLink" to="/shoppingbasket">Shopping Basket</router-link></div>
+            <div class="col-12 my-1"><p class="headerMenu">Firebase Realtime Database</p></div>
+            <div class="col-12 my-1"><router-link class="routerLink" to="/comment">Comment</router-link></div>
+            <div class="col-12 my-1"><p class="headerMenu">Example</p></div>
+            <div class="col-12 my-1"><router-link class="routerLink" to="/register">Register</router-link></div>
+            <div class="col-12 my-1"><router-link class="routerLink" to="/login">Login</router-link></div>
+          </div>
+        </div>
+        <div class="col-9">
+          <router-view />
+        </div>
+      </div>
     </div>
-    <router-view />
   </div>
 </template>
 
+<script>
+    export default {
+      name: 'App',
+      data() {
+        return{
+          nightMode: false
+        }
+      }
+    }
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import './assets/css/darktheme.css';
+  #app{
+      transition: all 0.5 ease-in-out;
+      color: #333;
+      background-color: #fff;
+  } 
+  .theme-dark{
+      color: #fff;
+      background-color: #333;
+  }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  i{
+    font-size: 30px;
+    cursor: pointer;
+  }
 </style>
