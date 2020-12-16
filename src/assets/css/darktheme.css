@@ -21,6 +21,14 @@
     opacity: 0.8;
 }
 
+.app{
+    transition: all 0.5 ease-in-out;
+    color: #333;
+    background-color: #fff;
+    min-height: 100vh;
+} 
+
+
 .headerMenu{
     font-weight:500;
     color:#0075ff;
@@ -89,8 +97,18 @@ p{
     right: 10px;
 }
 
-#app{
-    transition: all 0.5 ease-in-out;
-    color: #2c3e50;
-    background-color: #fff;
+
+
+/* theme dark */
+
+.app .theme-dark{
+    color: #fff;
+    background-color: #333;
+}
+.app .theme-dark #nav a {
+    /* font-weight: bold; */
+    color: #fff;
+    background-color: #333;
+    padding: 2px 7px 5px 5px;
+    border-radius: 6px;
 }
