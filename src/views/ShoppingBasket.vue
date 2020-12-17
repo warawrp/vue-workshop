@@ -33,14 +33,14 @@
                     <tbody>
                         <tr v-for="product in cart" :key="product.id">
                             <td><img :src="product.image" class="imgProduct"></td>
-                            <td>{{product.name}}</td>
-                            <td>{{product.price}}</td>
+                            <td class="td-font">{{product.name}}</td>
+                            <td class="td-font">{{product.price}}</td>
                             <td> 
                                 <button type="button" class="btn-dark2" @click="minusQty(product)"><i class="fas fa-minus"></i></button>
-                                <label class="mx-3">{{product.quantity}}</label>
+                                <label class="mx-3 td-font">{{product.quantity}}</label>
                                 <button type="button" class="btn-dark2" @click="plusQty(product)"><i class="fas fa-plus"></i></button>
                             </td>
-                            <td>{{product.total}}</td>
+                            <td class="td-font">{{product.total}}</td>
                             <td><button type="button" class="btn btn-danger" @click="removeProduct(product)"><i class="fas fa-trash-alt"></i></button></td>
                         </tr>
                     </tbody>

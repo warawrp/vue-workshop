@@ -2,12 +2,22 @@
 <template>
   <div id="app" class="app">
     <div :class="{'theme-dark' : nightMode}">
-      <div class="container-fluid pt-3" >
-        <div class="row" style="height:100vh;">
+      <div class="container-fluid pt-3">
+        <div class="row">
           <div class="col-3 text-left" id="nav">
             <div class="row">
-              <div class="iconTheme" v-if="nightMode" @click="nightMode = !nightMode"><i class="fas fa-sun mr-2" ></i>Light Mode</div>
-              <div class="iconTheme" v-else @click="nightMode = !nightMode"><i class="fas fa-moon mr-2"></i>Dark Mode</div>
+              <div class="switch">
+                <input type="checkbox"  id="theme-toggle" v-model="nightMode">
+                <label for="theme-toggle" class="slider round"></label>
+              </div>
+
+              <!-- <div class="iconTheme" v-if="nightMode" @click="nightMode = !nightMode">
+                <i class="fas fa-moon mr-2" ></i>Light Mode
+              </div>
+              <div class="iconTheme" v-else @click="nightMode = !nightMode">
+                <i class="fas fa-moon mr-2"></i>Dark Mode
+              </div> -->
+
               <div class="col-12 my-1"><router-link class="routerLink" to="/">Home</router-link></div>
               <!-- <div class="col-12"><router-link to="/about">About</router-link></div> -->
               <div class="col-12 my-1"><p class="headerMenu">Workshop</p></div>
@@ -38,6 +48,14 @@
         return{
           nightMode: false
         }
+      },
+      watch:{
+        nightMode:function(){
+          localStorage.setItem("nightMode",JSON.stringify(this.nightMode));
+        }
+      },
+      created(){
+        this.nightMode = JSON.parse(localStorage.getItem("nightMode"));
       }
     }
 </script>
