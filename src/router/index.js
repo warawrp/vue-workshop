@@ -9,7 +9,7 @@ import CalculatePrice from "../views/CalculatePrice.vue";
 import ShoppingBasket from "../views/ShoppingBasket.vue";
 import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
-import ImageSlide from "../views/ImageSlide.vue";
+import VueSlickCarousel from "../views/ImageSlide.vue";
 
 Vue.use(VueRouter);
 
@@ -69,7 +69,7 @@ const routes = [
   {
     path: "/imageslide",
     name: "ImageSlide",
-    component: ImageSlide
+    component: VueSlickCarousel
   }
 ];
 
