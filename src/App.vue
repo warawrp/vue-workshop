@@ -30,6 +30,7 @@
               <div class="col-12 my-1"><p class="headerMenu">Example</p></div>
               <div class="col-12 my-1"><router-link class="routerLink" to="/register">Register</router-link></div>
               <div class="col-12 my-1"><router-link class="routerLink" to="/login">Login</router-link></div>
+              <div class="col-12 my-1"><router-link class="routerLink" to="/imageSlide">ImageSlide</router-link></div>
             </div>
           </div>
           <div class="col-9">
@@ -63,6 +64,7 @@
 
 <style>
   @import './assets/css/darktheme.css';
+  @import './assets/css/lighttheme.css';
 .iconTheme{
   cursor: pointer;
   padding-left: 20px;

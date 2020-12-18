@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+// import About from "../views/About.vue";
 import Comment from "../views/Comment.vue";
 import LimitMessage from "../views/LimitMessage.vue";
 import PreviewImage from "../views/PreviewImage.vue";
@@ -9,6 +9,7 @@ import CalculatePrice from "../views/CalculatePrice.vue";
 import ShoppingBasket from "../views/ShoppingBasket.vue";
 import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
+import ImageSlide from "../views/ImageSlide.vue";
 
 Vue.use(VueRouter);
 
@@ -18,16 +19,16 @@ const routes = [
     name: "Home",
     component: Home
   },
-  {
-    path: "/about",
-    name: "About",
-    component: About
+  // {
+  //   path: "/about",
+  //   name: "About",
+  //   component: About
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     // component: () =>
     //   import(/* webpackChunkName: "about" */ "../views/About.vue")
-  },
+  // },
   {
     path: "/comment",
     name: "Comment",
@@ -64,6 +65,11 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login
+  },
+  {
+    path: "/imageslide",
+    name: "ImageSlide",
+    component: ImageSlide
   }
 ];
 

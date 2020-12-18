@@ -1,0 +1,183 @@
+
+
+#nav {
+    padding: 30px;
+    text-decoration:none;
+}
+
+#nav a {
+    /* font-weight: bold; */
+    color: #2c3e50;
+    background-color: #fff;
+    padding: 2px 7px 5px 5px;
+    border-radius: 6px;
+}
+
+#nav a.router-link-exact-active {
+    background-color: #0075ff;
+    color: #fff;
+
+}
+.routerLink:hover{
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.app{
+    transition: all 0.5 ease-in-out;
+    color: #333;
+    background-color: #fff;
+    min-height: 100vh;
+} 
+
+
+.headerMenu{
+    font-weight:500;
+    color:#0075ff;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.btn-dark2{
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    background-color: #343A40;
+    color:white;
+    border: none;
+}
+.btn-dark2:focus{
+    outline: none;
+}
+.imgProduct{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+.hints {
+    padding:1em;
+    background:whitesmoke;
+    margin: 1em 0;
+    font-size: 14px;
+    color:darken(#D4DEDF, 50%);
+}
+p{
+    margin: 0!important;
+}
+.error{
+    font-size: 14px;
+    color: #ff6060;
+}
+.forgotPassword{
+    font-size: 14px;
+    position: absolute;
+    bottom:10px;
+    right: 120px;
+}
+.delete{
+    position:absolute;
+    color: #b94242;
+    top: 5px;
+    right: 10px;
+}
+.edit{
+    position:absolute;
+    color: #42b983;
+    top: 5px;
+    right: 30px;
+}
+.update{
+    position:absolute;
+    color: #4297b9;
+    top: 5px;
+    right: 30px;
+}
+.cancel{
+    position:absolute;
+    color: #b94242;
+    top: 5px;
+    right: 10px;
+}
+
+
+/* switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    left: 18px;
+    width:75px;
+    height: 34px;
+}
+  
+.switch input {display:none;}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #dddddd;
+-webkit-transition: .4s;
+transition: .4s;
+border-radius: 34px;
+}
+
+/* วงกลม */
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+/* border: 2px solid rgb(156, 156, 156); */
+right:0;
+bottom:0;
+background-color:rgb(87, 87, 87);
+-webkit-transition: .4s;
+transition: .4s;
+border-radius: 50%;
+}
+.slider:before + :checked {
+border: 2px solid rgb(156, 156, 156);
+background-color:rgba(2, 2, 2, 0.867);
+}
+
+
+
+/* พื้นหลัง light */
+input:checked + .slider {
+background-color: #000;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #b5babd;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(-50px);
+}
+
+/*------ ADDED CSS ---------*/
+.slider:after{
+content:'Dark';
+color: #000;
+display: block;
+position: absolute;
+/* transform: translate(-50%,-50%); */
+top: 0;
+left: 10px;
+font-size: 16px;
+width: 100%;
+}
+  
+input:checked + .slider:after
+{  
+content:'Light';
+left: 30px;
+color: #fff;
+}
+  
+/* switch */
