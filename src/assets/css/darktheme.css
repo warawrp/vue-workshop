@@ -221,6 +221,12 @@ color: #fff;
     border-color: rgb(95, 95, 95);
 }
 
+.app .theme-dark textarea{
+    background-color:#222;
+    color: #fff;
+    border-color: rgb(95, 95, 95);
+}
+
 .app .theme-dark .modal-content{
     background-color:#222;
 }
