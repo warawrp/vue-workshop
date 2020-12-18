@@ -10,6 +10,7 @@ import ShoppingBasket from "../views/ShoppingBasket.vue";
 import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import VueSlickCarousel from "../views/ImageSlide.vue";
+import Index from "../views/Index.vue";
 
 Vue.use(VueRouter);
 
@@ -70,6 +71,11 @@ const routes = [
     path: "/imageslide",
     name: "ImageSlide",
     component: VueSlickCarousel
+  },
+  {
+    path: "/index",
+    name: "Index",
+    component: Index
   }
 ];
 

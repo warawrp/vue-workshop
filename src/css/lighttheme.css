@@ -30,12 +30,13 @@
     min-height: 100vh;
 } 
 
-
 .headerMenu{
     font-weight:500;
     color:#0075ff;
     margin: 0;
     padding-left: 5px;
+    font-size: 16px;
+    cursor: pointer !important;
 }
 
 .btn-dark2{
