@@ -82,6 +82,8 @@
 
                 </div>
               </div>
+
+              <div class="col-12 my-1"><router-link class="routerLink" to="/ajax">Ajax</router-link></div>
             </div>
           </div>
           <div class="col-9">

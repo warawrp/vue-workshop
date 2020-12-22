@@ -11,6 +11,7 @@ import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import VueSlickCarousel from "../views/ImageSlide.vue";
 import Index from "../views/Index.vue";
+import Ajax from "../views/Ajax.vue";
 
 Vue.use(VueRouter);
 
@@ -76,6 +77,11 @@ const routes = [
     path: "/index",
     name: "Index",
     component: Index
+  },
+  {
+    path: "/ajax",
+    name: "Ajax",
+    component: Ajax
   }
 ];
 
